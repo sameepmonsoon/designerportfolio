@@ -32,7 +32,7 @@ const Navbar = (props: NavLinks) => {
 
   return (
     <div
-      className={` z-[10] border-b-[1px] dark:border-b-white/20 bg-b-[0px 1px 2px] fixed rgba(0, 0, 0, 0.1)] h-[58px] w-[100vw] flex flex-row px-[2rem] items-center justify-center bg-white ${
+      className={` z-[10] border-b-[0px] dark:border-b-white/20 bg-b-[0px 1px 2px] fixed rgba(0, 0, 0, 0.1)] h-[58px] w-[100vw] flex flex-row px-[2rem] items-center justify-center bg-white ${
         !visible
           ? "-translate-y-[102%]  transition-transform ease-in-out duration-[300ms] z-[10]"
           : "translate-y-0  transition-transform ease-in-out duration-[500ms] z-[10]"
