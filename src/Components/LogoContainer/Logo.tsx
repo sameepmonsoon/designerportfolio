@@ -10,8 +10,9 @@ const Logo = (props: { otherSection?: boolean }) => {
       className={`h-[55px] w-[60px] bg-contain flex flex-row justify-start items-center text-deep-blue ${
         otherSection && "dark:text-white"
       } `}>
-      <span className="text-[20px] font-[800]">Cr<span className="text-yellow">&</span></span>
-      {/* <TbHexagonLetterU size={35} /> */}
+      <span className="text-[28px] font-[800]">
+        Cr<span className="text-yellow">&</span>
+      </span>
     </Link>
   );
 };
