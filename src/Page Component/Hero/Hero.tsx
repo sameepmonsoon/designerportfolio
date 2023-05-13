@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, { useEffect, useState } from "react";
 import defaulUserImage from "../../assets/userImage.svg";
 import { motion } from "framer-motion";
@@ -18,6 +19,7 @@ const Hero = (props: {
   optionalButton?: string;
   optionalButtonPath?: string;
   userImage: string;
+  homeBgName: string;
 }) => {
   const {
     userName,
@@ -25,126 +27,100 @@ const Hero = (props: {
     resumeButton,
     optionalButton,
     optionalButtonPath,
+    homeBgName,
     userImage,
   } = props;
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    setPosition({ x: e.clientX, y: e.clientY });
+  };
+  const styles = {
+    background: 'url("/path/to/image.jpg")',
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  };
   return (
-    <section className="snap-start md:flex-row md:h-screen gap-16 py-1 px-10 flex flex-col items-center justify-center dark:bg-deep-blue">
-      <div className="heroText order-2  flex flex-col w-[25rem] md:w-[40rem] pr-3 gap-3 text-deep-blue dark:text-white">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ delay: 0.1, duration: 0.4 }}
-          variants={{
-            hidden: {
-              opacity: 0,
-              x: -50,
-            },
-            visible: {
-              opacity: 1,
-              x: 10,
-            },
-          }}>
-          <p className="text-[4rem] font-[fantasy,sans] font-[700] z-10 text-center md:text-start whitespace-rap capitalize w-full h-auto h-max-[10rem] md:h-auto md:max-h-[7rem] overflow-hidden">
-            {userName}
-          </p>
-          <p className="mt-2 mb-7 md:text-[18px] text-lg text-center md:text-start px-5 md:px-0 break-words max-h-[5.5rem] overflow-hidden">
-            {userIntroduction}
-          </p>
-        </motion.div>
-        <motion.div
-          className="flex mt-5 justify-center md:justify-start gap-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          variants={{
-            hidden: {
-              opacity: 0,
-              x: -50,
-            },
-            visible: {
-              opacity: 1,
-              x: 10,
-            },
-          }}>
-          <span className="flex flex-row transition duration-500 justify-center overflow-hidden flex-nowrap items-center min-h-[2.3rem] text-[1rem] font-semibold max-h-[2.6rem] w-auto max-w-[7rem] min-w-[6rem] px-1 rounded-[5px]  hover:bg-deep-blue hover:text-white hover:border-[1px] hover:border-white text-deep-blue dark:text-white dark:hover:text-deep-blue border-[1px] border-deep-blue/40 dark:border-white/40 dark:hover:bg-white">
-            {resumeButton}
-          </span>
-          <ScrollLink
-            smooth={true}
-            duration={500}
-            to={optionalButtonPath ? optionalButtonPath.toString() : "/"}
-            className="flex flex-row transition cursor-pointer duration-500 justify-center overflow-hidden flex-nowrap items-center min-h-[2.3rem] text-[0.9rem] font-semibold max-h-[2.6rem] w-auto max-w-[7rem] min-w-[6rem] px-1 rounded-[5px]  hover:bg-deep-blue hover:text-white hover:border-[1px] hover:border-white text-deep-blue dark:text-white dark:hover:text-deep-blue border-[1px] border-deep-blue/40 dark:border-white/40 dark:hover:bg-white">
-            {optionalButton}
-          </ScrollLink>
-        </motion.div>
-        <motion.div
-          className="flex mt-5 justify-center md:justify-start gap-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          variants={{
-            hidden: {
-              opacity: 0,
-              x: -50,
-            },
-            visible: {
-              opacity: 1,
-              x: 10,
-            },
-          }}>
-          <SocialMediaIcons
-            socialMediaLinks={
-              <>
-                <Link to="https://github.com/sameeprana" target="_blank">
-                  <AiFillGithub
-                    className=" transition duration-200 "
-                    size={35}
-                  />
-                </Link>
-                <Link
-                  to="https://www.linkedin.com/in/monsoon-rana-92040a206/"
-                  target="_blank">
-                  <GrLinkedinOption size={32} />
-                </Link>
-                {/* <Link to="https://www.facebook.com">
-                  <BsFacebook size={32} />
-                </Link>
-                <Link to="https://www.LinkedIn.com">
-                  <AiOutlineInstagram size={35} />
-                </Link> */}
-                <Link to="https://twitter.com/Monsoon_rana" target="_blank">
-                  <ImTwitter size={32} />
-                </Link>
-              </>
-            }
-          />
-        </motion.div>
+    <section
+      onMouseMove={handleMouseMove}
+      id="hero"
+      className="myDiv snap-start min-h-screen gap-[10rem]  flex flex-col items-center md:items-start relative md:top-0 justify-center dark:bg-deep-blue">
+      <div className="w-screen h-screen text-black flex flex-col gap-2 justify-start items-start">
+        <div className="para w-full min-h-screen sm:h-[50%] flex flex-col sm:flex-row justify-start items-center overflow-hidden">
+          <div className="flex flex-col justify-start items-start  order-2 sm:order-1">
+            <div className="text-[3rem]  sm:text-[6rem] sm:text-center md:text-[10rem] lg:text-[14rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b] font-[fantasy,sans] font-[700] z-[-10] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
+              {userName}
+            </div>
+            <p className="w-auto p-1 order-3 text-[13px] sm:text-[16px] font-[600] text-gray-600">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+              tenetur ipsa ad at corporis minus architecto illum odit corrupti
+              eos? Sint cumque aperiam impedit repellat facilis laudantium qui
+              fugit reprehenderit.
+            </p>
+          </div>
+          <div className=" absolute  top-[60%] left-[10%] z-[-10] text-[9rem] sm:text-start md:text-[10rem] lg:text-[14rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b]/10 font-[fantasy,sans] font-[700] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
+            with
+          </div>
+          <motion.div
+            className="order-1 md:order-2 h-[50%] sm:h-[50%] min-w-[60%] px-10 sm:min-w-[40%] relative right-[-2.4rem] sm:right-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.9 }}
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: 100,
+              },
+              visible: {
+                opacity: 1,
+                x: 0,
+              },
+            }}>
+            <img
+              src={userImage ? userImage : defaulUserImage}
+              alt={""}
+              className=" w-full h-full p-[2px] rounded-lg object-cover"
+            />
+          </motion.div>
+        </div>
+        <div className="para w-full z-[-1] relative top-0 md:top-[-8rem] lg:top-[-18rem] min-h-screen sm:h-[50%] flex flex-col sm:flex-row justify-start items-center overflow-hidden">
+          <div className="flex flex-col justify-start items-start order-2">
+            <div className="text-[3rem]  sm:text-[6rem] sm:text-center  md:text-[10rem] lg:text-[14rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b]/50 font-[fantasy,sans] font-[700] z-[-10] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
+              {homeBgName}
+            </div>
+            <p className="w-auto p-1 order-3 text-[13px] sm:text-[16px] font-[600]">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+              tenetur ipsa ad at corporis minus architecto illum odit corrupti
+              eos? Sint cumque aperiam impedit repellat facilis laudantium qui
+              fugit reprehenderit.
+            </p>
+          </div>
+          <motion.div
+            className="order-1 h-[50%] sm:h-[70%] min-w-[60%] px-10 sm:min-w-[40%] relative left-[-2.4rem] sm:left-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.9 }}
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: -100,
+              },
+              visible: {
+                opacity: 1,
+                x: 0,
+              },
+            }}>
+            <img
+              src={userImage ? userImage : defaulUserImage}
+              alt={""}
+              className=" w-full h-full p-[2px] rounded-lg object-cover sm:object-cover"
+            />
+          </motion.div>
+        </div>
       </div>
-      <motion.div
-        className="image order-1 md:order-2 flex justify-center items-start basis-3/5 z-10 mt-16 py-1 w-[20rem] overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-        variants={{
-          hidden: {
-            opacity: 1,
-            x: 0,
-          },
-          visible: {
-            opacity: 1,
-            x: 0,
-          },
-        }}>
-        <img
-          src={userImage ? userImage : defaulUserImage}
-          alt={""}
-          className="rounded-full md:w-[40%] md:h-[40%] w-[60%] h-[60%] animate-[borderWave_10s_linear_infinite]"
-        />
-      </motion.div>
     </section>
   );
 };

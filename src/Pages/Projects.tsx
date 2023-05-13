@@ -45,11 +45,11 @@ const Projects = () => {
                   <Link to="https://kpop.com.np/" target="_blank">
                     <RxGlobe
                       className="transition duration-200 group-hover:animate-[spin_3s_linear_infinite]"
-                      size={35}
+                      size={25}
                     />
                   </Link>
                   <Link to="https://in.kpop.com.np/" target="_blank">
-                    <BiLinkAlt className="transition duration-200 " size={35} />
+                    <BiLinkAlt className="transition duration-200 " size={25} />
                   </Link>
                 </>
               }
@@ -89,13 +89,13 @@ const Projects = () => {
                     target="_blank">
                     <AiFillGithub
                       className="transition duration-200 "
-                      size={35}
+                      size={25}
                     />
                   </Link>
                   <Link
                     to="https://mern-twitter-clone.vercel.app/"
                     target="_blank">
-                    <BiLinkAlt className="transition duration-200 " size={35} />
+                    <BiLinkAlt className="transition duration-200 " size={25} />
                   </Link>
                 </>
               }

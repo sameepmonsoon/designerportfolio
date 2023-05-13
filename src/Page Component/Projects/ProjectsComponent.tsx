@@ -1,12 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ProjectsComponent = (props: { projectContent: React.ReactElement }) => {
   const { projectContent } = props;
+
+  const [backgroundColor, setBackgroundColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("");
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const scrollPosition = window.pageYOffset;
+    if (scrollPosition > 1200 && scrollPosition < 2000) {
+      setBackgroundColor("white");
+      setTextColor("black");
+    } else {
+      setBackgroundColor("transparent");
+      setTextColor("black");
+    }
+  };
+
   return (
     <div
+      style={{
+        background: backgroundColor,
+        transition: "background 1s ease-in-out",
+      }}
       id="projects"
-      className="md:w-full md:min-h-[100vh] gap-20 lg:gap-10 sm:gap-x-20 pt-[1.5rem] md:px-5 flex-col flex flex-wrap md:flex  md:flex-row  justify-center items-center overflow-hidden">
-      <p className="h-20 py-[5rem] md:py-0 w-full relative flex flex-col md:flex-row justify-center items-center px-10 lg:top-5 top-14 capitalize text-4xl font-[600] gap-[7px] text-deep-blue dark:text-white">
+      className="md:w-screen md:min-h-[100vh] gap-20 lg:gap-10  sm:gap-x-20 pb-10 pt-[1.5rem] md:px-5 flex-col flex flex-wrap  md:flex-row justify-center lg:justify-start items-center overflow-hidden">
+      <p
+        style={{ color: textColor }}
+        className="h-20 w-full py-[5rem] md:py-0 relative flex flex-col md:flex-row justify-center lg:justify-start items-center lg:top-5 top-14 capitalize text-xl font-[600] gap-[7px] dark:text-white">
         <span className="W-auto ">Work experience</span>
         <span>&</span>
         <span className="w-auto">personal projects</span>

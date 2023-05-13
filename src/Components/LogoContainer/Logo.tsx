@@ -1,5 +1,5 @@
 import React from "react";
-import { TbSquareLetterM } from "react-icons/tb";
+import { TbHexagonLetterU, TbSquareLetterM } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import image from "/src/assets/portfolio.png";
 const Logo = (props: { otherSection?: boolean }) => {
@@ -10,8 +10,8 @@ const Logo = (props: { otherSection?: boolean }) => {
       className={`h-[55px] w-[60px] bg-contain flex flex-row justify-start items-center text-deep-blue ${
         otherSection && "dark:text-white"
       } `}>
-      {/* MON? */}
-      <TbSquareLetterM size={45} />
+      <span className="text-[20px] font-[800]">Cr<span className="text-yellow">&</span></span>
+      {/* <TbHexagonLetterU size={35} /> */}
     </Link>
   );
 };

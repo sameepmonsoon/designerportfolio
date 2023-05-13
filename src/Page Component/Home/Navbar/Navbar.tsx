@@ -1,9 +1,10 @@
+//@ts-nocheck
+
 import { useState, useEffect } from "react";
 import Logo from "../../../Components/LogoContainer/Logo";
 import ToggleButton from "../../../Components/ToggleButton/ToggleButton";
 import { RiMenuLine, IoCloseSharp } from "react-icons/all";
 import { Link as ScrollLink } from "react-scroll";
-
 type NavLinks = {
   LinkName: Array<any>;
   scrollToSkills: () => void;
@@ -18,36 +19,36 @@ const Navbar = (props: NavLinks) => {
     setNav(!nav);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollPos = window.pageYOffset;
+  //     setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+  //     setPrevScrollPos(currentScrollPos);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos, visible]);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [prevScrollPos, visible]);
 
   return (
     <div
-      className={` z-[10] border-b-[0px] dark:border-b-white/20 bg-b-[0px 1px 2px] fixed rgba(0, 0, 0, 0.1)] h-[58px] w-[100vw] flex flex-row px-[2rem] items-center justify-center bg-white ${
+      className={` z-[10] border-b-[0px] font-sans dark:border-b-white/20 bg-white/90 fixed h-[52px] backdrop-blur-sm w-[100vw] flex flex-row px-[2rem] items-center justify-center ${
         !visible
           ? "-translate-y-[102%]  transition-transform ease-in-out duration-[300ms] z-[10]"
           : "translate-y-0  transition-transform ease-in-out duration-[500ms] z-[10]"
       }`}>
       <Logo />
-      <div className="relative flex h-[100%] z-1 flex-row flex-1 justify-end items-center gap-0 text-[17px] text-deep-blue font-[500] font-fanstasy">
-        <div className="hidden relative uppercase md:flex  justify-center items-center gap-1">
+      <div className="relative flex h-[100%] z-1 flex-row flex-1 justify-end items-center gap-0 text-[17px] text-deep-blue font-[600] font-fanstasy">
+        <div className="hidden relative capitalize md:flex  justify-center items-center gap-1">
           {LinkName.map((name, index) => (
             <ScrollLink
               smooth={true}
               duration={500}
               key={index}
               to={name.link}
-              className={`px-4 cursor-pointer
-              hover:bg-deep-blue/10  hover:text-deep-blue h-10 flex justify-center items-center rounded-[4px] 
+              className={`group px-4 relative cursor-pointer
+              hover:text-deep-blue h-[2rem] flex justify-center items-center rounded-[4px]   hover:rounded-none border-b-[2px] border-b-transparent
 `}
               onClick={() => {
                 window.scrollTo({
@@ -57,10 +58,14 @@ const Navbar = (props: NavLinks) => {
                 props.scrollToSkills;
               }}>
               {name.label}
+              <span
+                className={`absolute bg-transparent w-0 group-hover:w-[70%] h-full transition:all duration-200 group-hover:border-b-[2px] border-b-[black] border-b-[2px] z-10`}>
+                &nbsp;
+              </span>
             </ScrollLink>
           ))}
         </div>
-        <ToggleButton />
+        {/* <ToggleButton /> */}
       </div>
       <div className="flex relative md:hidden text-deep-blue cursor-pointer items-center justify-center select-none z-[3]">
         <span onClick={handleNav}>
@@ -89,7 +94,7 @@ const Navbar = (props: NavLinks) => {
                 top: 0,
                 behavior: "smooth",
               });
-            }}> 
+            }}>
             {name.label}
           </ScrollLink>
         ))}

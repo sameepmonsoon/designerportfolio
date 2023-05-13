@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { BsMoonStarsFill, BsSun } from "react-icons/bs";
-import { FaSun } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { GiEvilMoon, GiMoonOrbit } from "react-icons/gi";
-import { CgDarkMode } from "react-icons/cg";
+import { BiSun } from "react-icons/bi";
+import { CiSun } from "react-icons/ci";
+import { TbMoon } from "react-icons/tb";
 
 const ToggleButton = () => {
   const [toggle, setToggle] = useState(
@@ -24,7 +22,9 @@ const ToggleButton = () => {
   }, [theme]);
 
   const handleThemeToggle = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTimeout(() => {
+      setTheme(theme === "dark" ? "light" : "dark");
+    }, 200);
   };
 
   const handleToggle = () => {
@@ -50,26 +50,12 @@ const ToggleButton = () => {
       }}
       className="cursor-pointer w-[3.3rem] h-[2.5rem] flex flex-row md:justify-end md:items-center justify-start items-center">
       {theme === "dark" ? (
-        <span
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className="hover:animate-spin">
-          <motion.div
-            animate={{ rotate: isHovered ? 360 : 0 }}
-            transition={{ duration: 0.5 }}>
-            <FaSun size={30} />
-          </motion.div>
+        <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <BiSun size={25} />
         </span>
       ) : (
-        <span
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className="hover:animate-spin">
-          <motion.div
-            animate={{ rotate: isHovered ? 360 : 0 }}
-            transition={{ duration: 0.3 }}>
-            <GiEvilMoon size={30} />
-          </motion.div>
+        <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <TbMoon size={25} />
         </span>
       )}
     </div>

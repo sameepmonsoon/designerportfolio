@@ -2,22 +2,28 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-const SocialMediaIcons = (props: { socialMediaLinks: React.ReactElement }) => {
-  const { socialMediaLinks } = props;
+const SocialMediaIcons = (props: {
+  socialMediaLinks: React.ReactElement;
+  title: string;
+}) => {
+  const { socialMediaLinks, title } = props;
   return (
-    <div className="flex justify-center md:justify-start my-10 gap-7 min-w-[20rem] items-center dark:bg-deep-blue bg-white bg-clip-text ">
-      {/* <span className="hover:bg-dark-grey/30 p-1 rounded-full  "></span> */}
-      {socialMediaLinks &&
-        socialMediaLinks.props &&
-        socialMediaLinks.props.children &&
-        socialMediaLinks.props.children.map(
-          (Link: React.ReactElement, index: number) => (
-            <span key={index} className="group flex justify-center">
-              <span className="absolute rounded-full group-hover:bg-dark-grey/30 h-[2.8rem] w-[2.8rem] z-[-1] top-[31%]"></span>
-              {Link}
-            </span>
-          )
-        )}
+    <div className="flex flex-col gap-0 justify-start items-start">
+      <h3 className="text-white font-[700] text-[18px] border-b-2 w-full pb-2">
+        {title}
+      </h3>
+      <div className="flex justify-center items-start md:justify-start my-10 gap-7 min-w-[20rem] bg-white bg-clip-text">
+        {socialMediaLinks &&
+          socialMediaLinks?.props &&
+          socialMediaLinks?.props?.children &&
+          socialMediaLinks?.props?.children?.map(
+            (Link: React.ReactElement, index: number) => (
+              <span key={index} className="group flex justify-center">
+                {Link}
+              </span>
+            )
+          )}
+      </div>
     </div>
   );
 };

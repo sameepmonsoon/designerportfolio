@@ -8,7 +8,7 @@ module.exports = {
         opensans: ["Open Sans", "sans-serif"],
       },
       colors: {
-        "deep-blue": "#010026",
+        "deep-blue": "#141414",
         blue: "#2CBCE9",
         red: "#DC4492",
         yellow: "#FDCC49",
@@ -27,6 +27,10 @@ module.exports = {
       },
     },
     keyframes: {
+      marquee: {
+        "0%": { left: "0%" },
+        "100%": { left: "-100%" },
+      },
       borderWave: {
         "0%": {
           borderRadius: " 40% 60% 70% 30% / 40% 40% 60% 50%",

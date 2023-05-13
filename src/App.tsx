@@ -3,7 +3,7 @@ import { RouterProvider, createHashRouter } from "react-router-dom"; // import c
 import Home from "./Pages/Home";
 import "./App.css";
 import { Helmet } from "react-helmet";
-import { TbSquareLetterM } from "react-icons/tb";
+import { TbHexagonLetterU, TbSquareLetterM } from "react-icons/tb";
 import { renderToString } from "react-dom/server";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,7 +15,7 @@ const App = () => {
   const [theme, setTheme] = useState("dark");
   // Create a styled icon with white fill color
   const StyledCartIcon = () => (
-    <TbSquareLetterM size={25} style={{ color: "#2CBCE9" }} />
+    <TbHexagonLetterU size={25} style={{ color: "#2CBCE9" }} />
   );
 
   // Convert the styled icon to a base64 string
@@ -53,7 +53,7 @@ const App = () => {
   return (
     <>
       <Helmet>
-        <title>Monsoon</title>
+        <title>Uddhab</title>
         <link
           rel="icon"
           type="image/svg+xml"

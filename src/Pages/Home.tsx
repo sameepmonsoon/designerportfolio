@@ -1,4 +1,4 @@
-import image from "/src/assets/monsoon.jpg";
+import image from "/src/assets/uddhab.jpg";
 import Hero from "../Page Component/Hero/Hero";
 import About from "../Page Component/About/About";
 import HomeLayout from "../Layout/HomeLayout";
@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <HomeLayout
       Children={
-        <div className="snap-mandatory snap-y overflow-hidden">
+        <div className="snap-mandatory snap-y overflow-hidden" id="home">
           <Hero
             userImage={image}
             resumeButton={
@@ -29,17 +29,18 @@ const Home = () => {
             }
             optionalButton={" Say Hello"}
             optionalButtonPath={"contact"}
-            userName={"Monsoon"}
+            userName={"Designing"}
+            homeBgName={"Purpose"}
             userIntroduction={
-              "Hello, I'm Sameep Monsoon Rana. I love to learn and build new things.\
+              "I love to learn and build new things.\
             "
             }
           />
           <About />
-          <Skills />
+          {/* <Skills /> */}
           <Projects />
-          <AboutPage />
-          <GetIntouch />
+          {/* <AboutPage /> */}
+          {/* <GetIntouch /> */}
         </div>
       }
     />
