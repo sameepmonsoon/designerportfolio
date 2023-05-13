@@ -37,10 +37,10 @@ const Home = () => {
             }
           />
           <About />
-          {/* <Skills /> */}
+          <Skills />
           <Projects />
           {/* <AboutPage /> */}
-          {/* <GetIntouch /> */}
+          <GetIntouch />
         </div>
       }
     />

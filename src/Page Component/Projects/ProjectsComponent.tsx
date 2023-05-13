@@ -34,9 +34,9 @@ const ProjectsComponent = (props: { projectContent: React.ReactElement }) => {
       <p
         style={{ color: textColor }}
         className="h-20 w-full py-[5rem] md:py-0 relative flex flex-col md:flex-row justify-center lg:justify-start items-center lg:top-5 top-14 capitalize text-xl font-[600] gap-[7px] dark:text-white">
-        <span className="W-auto ">Work experience</span>
-        <span>&</span>
-        <span className="w-auto">personal projects</span>
+        <span className="W-auto "></span>
+        <span></span>
+        <span className="w-auto">Recent projects</span>
       </p>
       {projectContent}
     </div>

@@ -45,11 +45,11 @@ const Hero = (props: {
     <section
       onMouseMove={handleMouseMove}
       id="hero"
-      className="myDiv snap-start min-h-screen gap-[10rem]  flex flex-col items-center md:items-start relative md:top-0 justify-center dark:bg-deep-blue">
+      className="myDiv snap-start min-h-screen gap-[10rem]  flex flex-col items-center md:items-start relative md:top-0 justify-center dark:bg-deep-blue ">
       <div className="w-screen h-screen text-black flex flex-col gap-2 justify-start items-start">
         <div className="para w-full min-h-screen sm:h-[50%] flex flex-col sm:flex-row justify-start items-center overflow-hidden">
           <div className="flex flex-col justify-start items-start  order-2 sm:order-1">
-            <div className="text-[3rem]  sm:text-[6rem] sm:text-center md:text-[10rem] lg:text-[14rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b] font-[fantasy,sans] font-[700] z-[-10] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
+            <div className="text-[3rem]  sm:text-[6rem] sm:text-center md:text-[10rem] lg:text-[14rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b] font-[fantasy,sans] font-[900] z-[-10] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
               {userName}
             </div>
             <p className="w-auto p-1 order-3 text-[13px] sm:text-[16px] font-[600] text-gray-600">

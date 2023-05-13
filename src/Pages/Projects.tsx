@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import Card from "../Components/Card/Card";
 import ProjectsComponent from "../Page Component/Projects/ProjectsComponent";
 import { motion } from "framer-motion";
-import projectCardImage from "/src/assets/character_project1.svg";
-import restaurant from "/src/assets/restaurant.svg";
-import amazon from "/src/assets/amazon-3.svg";
-import twitter from "/src/assets/twitter.svg";
-import futsal from "/src/assets/futsal.svg";
-import blood from "/src/assets/blood-doctors.svg";
+import projectCardImage from "/src/assets/figma1.jpg";
+import restaurant from "/src/assets/figma6.jpg";
+import amazon from "/src/assets/figma3.png";
+import twitter from "/src/assets/figma4.jpg";
+import futsal from "/src/assets/figma5.png";
+import blood from "/src/assets/figma2.jpg";
 const Projects = () => {
   return (
     <ProjectsComponent
@@ -31,24 +31,27 @@ const Projects = () => {
               },
             }}>
             <Card
-              cardTitle={"Admin Panel for Kpop Restaurant Pvt. Ltd."}
+              cardTitle={"E-commerce mobile app"}
               cardDescription={
                 <p>
-                  It allows restaurant managers to streamline their day-to-day
-                  operations, manage table reservations, view orders, track
-                  inventory, and view sales reports.
+                  The application allows users to browse products, add them to
+                  the cart, and purchase them later.
                 </p>
               }
               cardImage={restaurant}
               cardLinks={
                 <>
-                  <Link to="https://kpop.com.np/" target="_blank">
+                  <Link
+                    to="https://www.figma.com/file/3zUEy0740DV8VVPWSygzru/E-commerce-mobile-app?type=design&node-id=0-1&t=PE3ejSBYJb4fhlFm-0"
+                    target="_blank">
                     <RxGlobe
                       className="transition duration-200 group-hover:animate-[spin_3s_linear_infinite]"
                       size={25}
                     />
                   </Link>
-                  <Link to="https://in.kpop.com.np/" target="_blank">
+                  <Link
+                    to="https://www.figma.com/file/3zUEy0740DV8VVPWSygzru/E-commerce-mobile-app?type=design&node-id=0-1&t=PE3ejSBYJb4fhlFm-0"
+                    target="_blank">
                     <BiLinkAlt className="transition duration-200 " size={25} />
                   </Link>
                 </>

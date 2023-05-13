@@ -33,12 +33,12 @@ const Card = (props: CardTypes) => {
                   mouseOver && "opacity-[1]"
                 } h-[100%] w-[100%] transition-all ease-in-out duration-300 z-10 bg-white/30 backdrop-blur-sm`
           }>
-          <div className="font-[roboto] h-[100%] w-[100%] absolute p-4 z-[0] bg-white/30 backdrop-blur-sm  text-deep-blue ">
-            <div className="overflow-hidden m-0 w-full text-center md:px-0 min-h-full">
+          <div className="font-[roboto] h-[50%] w-[100%] absolute bottom-0 p-4 z-[0] bg-white/30 backdrop-blur-sm  text-deep-blue ">
+            <div className="overflow-hidden m-0 w-full text-center md:px-0 min-h-[50%]">
               {cardDescription}
             </div>
           </div>
-          <span className="absolute bottom-[10px] z-[10] flex flex-row gap-10  text-deep-blue bg-clip-text h-10">
+          <span className="absolute top-[70px] z-[10] flex flex-row gap-10  text-deep-blue bg-clip-text h-10">
             {cardLinks &&
               cardLinks.props.children &&
               cardLinks.props.children.map(
@@ -74,7 +74,7 @@ const Card = (props: CardTypes) => {
           <img
             src={cardImage}
             alt="image"
-            className="order-1 h-full rounded-[5px] w-full overflow-hidden mt-5 p-3"
+            className="order-1 h-full rounded-[5px] w-full overflow-hidden mt-5"
           />
         </motion.div>
         {/* <div
