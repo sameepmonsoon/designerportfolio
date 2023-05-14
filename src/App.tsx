@@ -15,7 +15,7 @@ const App = () => {
   const [theme, setTheme] = useState("dark");
   // Create a styled icon with white fill color
   const StyledCartIcon = () => (
-    <TbHexagonLetterU size={25} style={{ color: "#2CBCE9" }} />
+    <TbHexagonLetterU size={25} style={{ color: "#FDCC49" }} />
   );
 
   // Convert the styled icon to a base64 string

@@ -59,7 +59,7 @@ const HomeLayout = (props: HomeTypes) => {
         {Children}
       </div>
       <div className="order-3 snap-start">
-        <Footer footerText={"@2023 By Monsoon"} />
+        <Footer footerText={"@2023 By Uddhab with ❤"} />
       </div>
       {/* <div
         id="scroll-to-top"

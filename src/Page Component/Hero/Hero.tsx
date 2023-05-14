@@ -2,15 +2,7 @@
 import React, { useEffect, useState } from "react";
 import defaulUserImage from "../../assets/userImage.svg";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import SocialMediaIcons from "../../Components/SocialMediaIcons/SocialMediaIcons";
-import {
-  AiFillGithub,
-  GrLinkedinOption,
-  AiOutlineInstagram,
-  BsFacebook,
-  ImTwitter,
-} from "react-icons/all";
+import image2 from "../../assets/uddhab-2.jpg";
 import { Link as ScrollLink } from "react-scroll";
 const Hero = (props: {
   userName: string | any;
@@ -52,14 +44,11 @@ const Hero = (props: {
             <div className="text-[3rem]  sm:text-[6rem] sm:text-center md:text-[10rem] lg:text-[14rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b] font-[fantasy,sans] font-[900] z-[-10] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
               {userName}
             </div>
-            <p className="w-auto p-1 order-3 text-[13px] sm:text-[16px] font-[600] text-gray-600">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
-              tenetur ipsa ad at corporis minus architecto illum odit corrupti
-              eos? Sint cumque aperiam impedit repellat facilis laudantium qui
-              fugit reprehenderit.
+            <p className="w-auto p-[1rem] order-3 text-[16px] sm:text-[18px] font-[600] text-gray-600">
+              {userIntroduction}
             </p>
           </div>
-          <div className=" absolute  top-[60%] left-[10%] z-[-10] text-[9rem] sm:text-start md:text-[10rem] lg:text-[14rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b]/10 font-[fantasy,sans] font-[700] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
+          <div className=" absolute top-[70%] sm:top-[75%] md:top-[60%] md:left-[10%] z-[-10] text-[9rem] sm:text-start md:text-[10rem] lg:text-[14rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b]/10 font-[fantasy,sans] font-[700] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
             with
           </div>
           <motion.div
@@ -86,15 +75,12 @@ const Hero = (props: {
           </motion.div>
         </div>
         <div className="para w-full z-[-1] relative top-0 md:top-[-8rem] lg:top-[-18rem] min-h-screen sm:h-[50%] flex flex-col sm:flex-row justify-start items-center overflow-hidden">
-          <div className="flex flex-col justify-start items-start order-2">
-            <div className="text-[3rem]  sm:text-[6rem] sm:text-center  md:text-[10rem] lg:text-[14rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b]/50 font-[fantasy,sans] font-[700] z-[-10] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
+          <div className="flex flex-col justify-start items-start order-1 sm:order-2">
+            <div className="text-[3rem]  sm:text-[6rem] sm:text-center  md:text-[10rem] lg:text-[13.5rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b]/50 font-[fantasy,sans] font-[700] z-[-10] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
               {homeBgName}
             </div>
-            <p className="w-auto p-1 order-3 text-[13px] sm:text-[16px] font-[600]">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
-              tenetur ipsa ad at corporis minus architecto illum odit corrupti
-              eos? Sint cumque aperiam impedit repellat facilis laudantium qui
-              fugit reprehenderit.
+            <p className="w-auto p-1 order-3 text-[16px] sm:text-[18px] font-[600]">
+              Everything is designed. Few things are designed well.
             </p>
           </div>
           <motion.div
@@ -114,7 +100,7 @@ const Hero = (props: {
               },
             }}>
             <img
-              src={userImage ? userImage : defaulUserImage}
+              src={image2 ? image2 : defaulUserImage}
               alt={""}
               className=" w-full h-full p-[2px] rounded-lg object-cover sm:object-cover"
             />

@@ -4,6 +4,8 @@ import { IoLinkOutline } from "react-icons/io5";
 import { TbExternalLink } from "react-icons/tb";
 import { AiFillDribbbleCircle, AiOutlineLink } from "react-icons/ai";
 import { RiDribbbleFill } from "react-icons/ri";
+import { FaFigma } from "react-icons/fa";
+import { CgFigma } from "react-icons/cg";
 type CardTypes = {
   otherSection?: boolean;
   cardTitle: string | any;
@@ -21,7 +23,7 @@ const Card = (props: CardTypes) => {
         className={
           otherSection
             ? `bg-white dark:bg-deep-blue h-[30rem] w-[22rem] md:h-[35rem] md:w-[35rem] border-[1px] rounded-[10px] overflow-hidden border-gray-100 dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col  relative cursor-pointer justify-start items-center`
-            : `bg-white dark:bg-deep-blue h-[25rem] w-[22rem] sm:h-[27rem] sm:w-[32rem] md:h-[20rem] md:w-[29.5rem] border-[1px] rounded-[10px] overflow-hidden border-gray-200  dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col md:flex-row relative cursor-pointer justify-start items-center `
+            : `bg-white dark:bg-deep-blue h-[16rem] w-[22rem] sm:h-[27rem] sm:w-[32rem] md:h-[20rem] md:w-[29.5rem] border-[1px] rounded-[10px] overflow-hidden border-gray-200  dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col md:flex-row relative cursor-pointer justify-start items-center `
         }
         onMouseOver={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>
@@ -29,7 +31,7 @@ const Card = (props: CardTypes) => {
           className={
             otherSection
               ? `hidden`
-              : `siderDiv bg-white z-10 absolute opacity-0 overflow-hidden flex flex-row justify-center items-center rounded-[5px] ${
+              : `siderDiv cursor-pointer bg-white z-10 absolute opacity-0 overflow-hidden flex flex-row justify-center items-center rounded-[5px] ${
                   mouseOver && "opacity-[1]"
                 } h-[100%] w-[100%] transition-all ease-in-out duration-300 z-10 bg-white/30 backdrop-blur-sm`
           }>
@@ -90,9 +92,9 @@ const Card = (props: CardTypes) => {
       </section>
       <p className="font-semibold text-black/70 text-[16px] m-0 p-1 text-start w-full overflow-hidden flex justify-start items-center gap-2">
         {cardTitle}
-        <RiDribbbleFill
-          size={20}
-          className="text-pink-600 bg-white border-2 border-pink-500 rounded-full"
+        <CgFigma
+          size={18}
+          className="text-pink-600 cursor-pointer "
         />
       </p>
     </div>

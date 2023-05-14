@@ -9,10 +9,10 @@ const SocialMediaIcons = (props: {
   const { socialMediaLinks, title } = props;
   return (
     <div className="flex flex-col gap-0 justify-start items-start">
-      <h3 className="text-white font-[700] text-[18px] border-b-2 w-full pb-2">
+      <h3 className="text-white font-[700] text-[18px] border-b-[1px] w-[50%] max-w-full pb-2">
         {title}
       </h3>
-      <div className="flex justify-center items-start md:justify-start my-10 gap-7 min-w-[20rem] bg-white bg-clip-text">
+      <div className="flex flex-col sm:flex-row justify-center items-start md:justify-start my-10 gap-7 min-w-[20rem] bg-white bg-clip-text">
         {socialMediaLinks &&
           socialMediaLinks?.props &&
           socialMediaLinks?.props?.children &&

@@ -4,11 +4,8 @@ import About from "../Page Component/About/About";
 import HomeLayout from "../Layout/HomeLayout";
 import Skills from "../Page Component/SkillsPage/SkillsPage";
 import SpecialButton from "../Components/SpecialButton/SpecialButton";
-
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import Projects from "./Projects";
-import GetIntouch from "../Page Component/Contact/GetInTouch";
-import AboutPage from "./AboutPage";
 
 const Home = () => {
   return (
@@ -18,9 +15,7 @@ const Home = () => {
           <Hero
             userImage={image}
             resumeButton={
-              <a
-                href="https://drive.google.com/file/d/19gIQ1Lu0I-vMNzxQiR562GoheJa7395C/view?usp=sharing"
-                target="_blank">
+              <a href="https://drive.google.com/" target="_blank">
                 <SpecialButton
                   itemOne={"Resume"}
                   itemTwo={<HiOutlineClipboardDocumentList size={25} />}
@@ -32,7 +27,7 @@ const Home = () => {
             userName={"Designing"}
             homeBgName={"Purpose"}
             userIntroduction={
-              "I love to learn and build new things.\
+              "Dedication and commitment towards the work is my key to success as well as my goal.\
             "
             }
           />
@@ -40,7 +35,7 @@ const Home = () => {
           <Skills />
           <Projects />
           {/* <AboutPage /> */}
-          <GetIntouch />
+          {/* <GetIntouch /> */}
         </div>
       }
     />
