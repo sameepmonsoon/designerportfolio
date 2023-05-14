@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../Page Component/Home/Footer/Footer";
 import Navbar from "../Page Component/Home/Navbar/Navbar";
-import { FaHandPointUp } from "react-icons/fa";
-import image from "../../src/assets/superman.svg";
-import { TbArrowBigUpLinesFilled } from "react-icons/tb";
-import { SlArrowUp } from "react-icons/sl";
 type HomeTypes = {
   Children: React.ReactElement;
 };
@@ -61,28 +57,6 @@ const HomeLayout = (props: HomeTypes) => {
       <div className="order-3 snap-start">
         <Footer footerText={"@2023 By Uddhab with ❤"} />
       </div>
-      {/* <div
-        id="scroll-to-top"
-        style={{ display: "none" }}
-        onClick={() => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        }}
-        className="group z-[20] fixed bottom-[1rem] right-5 text-deep-blue cursor-pointer h-[3rem] bg-gray-900 w-[2.4rem] flex justify-center items-center  rounded-lg">
-        <SlArrowUp
-          size={24}
-          id="scroll-to-top"
-          className="relative top-[0.6rem] left-[0.4rem] text-white"
-        /> */}
-      {/* <RxDoubleArrowDown size={40} id="scroll-to-top" onClick={() => {
-          window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth",
-          });
-          }}/> */}
-      {/* </div> */}
     </div>
   );
 };

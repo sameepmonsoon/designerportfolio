@@ -34,8 +34,6 @@ const Home = () => {
           <About />
           <Skills />
           <Projects />
-          {/* <AboutPage /> */}
-          {/* <GetIntouch /> */}
         </div>
       }
     />
