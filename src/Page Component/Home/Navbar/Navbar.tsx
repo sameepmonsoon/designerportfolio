@@ -75,12 +75,12 @@ const Navbar = (props: NavLinks) => {
       <div
         className={
           nav
-            ? `fixed  md:hidden py-2 left-0 top-[3.6rem] opacity-1 transition-all ease-in-out duration-[400ms] z-[5] flex flex-col justify-start items-center border-b-[0px] border-b-white/20 min-w-full h-[15rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden ${
+            ? `fixed  md:hidden py-2 bg-white left-0 top-[3.6rem] opacity-1 transition-all ease-in-out duration-[400ms] z-[5] flex flex-col justify-start items-center border-b-[0px] border-b-white/20 min-w-full h-[15rem] dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden ${
                 !visible
                   ? "-translate-y-[100%]  transition-transform ease-in-out duration-[500ms] z-[5]"
                   : "translate-y-0  transition-all ease-in-out duration-[200ms] z-[5]"
               }`
-            : "fixed md:hidden left-0 top-[-30rem] transition-all ease-in-out duration-[400ms] z-[5] flex flex-col justify-start items-center  min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
+            : "fixed md:hidden left-0 top-[-30rem] backdrop-blur-sm bg-white/90  transition-all ease-in-out duration-[400ms] z-[5] flex flex-col justify-start items-center  min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
         }>
         {LinkName.map((name, index) => (
           <ScrollLink

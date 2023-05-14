@@ -31,23 +31,6 @@ const App = () => {
       path: "*",
       element: <Home />,
     },
-    // {
-    //   path: "/projects",
-    //   element: <Projects />,
-    // },
-    // {
-    //   path: "/about",
-    //   element: <AboutPage />,
-    // },
-
-    // {
-    //   path: "/contact",
-    //   element: <Contact />,
-    // },
-    // {
-    //   path: "*",
-    //   element: <PageNotFound />,
-    // },
   ]);
 
   return (

@@ -85,10 +85,14 @@ const Projects = () => {
               cardImage={twitter}
               cardLinks={
                 <>
-                  <Link to="image.png" target="_blank">
+                  <Link
+                    to="https://www.figma.com/file/5jYK7Xp78mhgASdJdV7lLb/coffeeholic?type=design&node-id=0-1&t=qirIypfXnK0JROh1-0"
+                    target="_blank">
                     <FaFigma className="transition duration-200 " size={25} />
                   </Link>
-                  <Link to="image.png/" target="_blank">
+                  <Link
+                    to="https://www.figma.com/file/5jYK7Xp78mhgASdJdV7lLb/coffeeholic?type=design&node-id=0-1&t=qirIypfXnK0JROh1-0"
+                    target="_blank">
                     <BiLinkAlt className="transition duration-200 " size={25} />
                   </Link>
                 </>
