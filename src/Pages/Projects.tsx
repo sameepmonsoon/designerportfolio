@@ -31,24 +31,21 @@ const Projects = () => {
               },
             }}>
             <Card
-              cardTitle={"E-commerce mobile app"}
+              cardTitle={"Online Apparel Store"}
               cardDescription={
                 <p>
-                  The application allows users to browse products, add them to
-                  the cart, and purchase them later.
+                  Landing page for a online apparel store , where you can look
+                  for a wide range of fashionable clothing and accessories for
+                  men, women, and children, all just a click away.
                 </p>
               }
               cardImage={restaurant}
               cardLinks={
                 <>
-                  <Link
-                    to="https://www.figma.com/file/3zUEy0740DV8VVPWSygzru/E-commerce-mobile-app?type=design&node-id=0-1&t=PE3ejSBYJb4fhlFm-0"
-                    target="_blank">
+                  <Link to="https://www.figma.com/" target="_blank">
                     <FaFigma size={25} />
                   </Link>
-                  <Link
-                    to="https://www.figma.com/file/3zUEy0740DV8VVPWSygzru/E-commerce-mobile-app?type=design&node-id=0-1&t=PE3ejSBYJb4fhlFm-0"
-                    target="_blank">
+                  <Link to="https://www.figma.com" target="_blank">
                     <BiLinkAlt className="transition duration-200 " size={25} />
                   </Link>
                 </>
