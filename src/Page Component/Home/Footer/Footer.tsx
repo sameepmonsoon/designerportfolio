@@ -83,7 +83,9 @@ const Footer = (props: FooterProps) => {
           />
         </div>
         <div className="text-white order-1 lg:order-2 flex flex-col justify-start items-start h-full gap-5 flex-1">
-          <p className="text-[18px] text-white/40">About me</p>
+          <p className="text-[18px] text-white/40 flex lg:justify-start justify-center items-center w-full">
+            <span>About me</span>
+          </p>
           <div className="flex flex-col sm:flex-row justify-center items-center sm:justify-start sm:items-start w-auto h-full ">
             <div className="w-auto text-[20px] order-2 sm:order-1">
               Hi, I am Uddhab Kunwar.I am a UI/UX designer with 1.5 years of
