@@ -28,7 +28,7 @@ const Footer = (props: FooterProps) => {
             socialMediaLinks={
               <>
                 <Link
-                  to="https://github.com/sameeprana"
+                  to="https://github.com/uddhab7"
                   target="_blank"
                   className="relative flex justify-start items-center text-white font-[700]">
                   <span
@@ -38,7 +38,7 @@ const Footer = (props: FooterProps) => {
                   +977 9818116748
                 </Link>
                 <Link
-                  to="https://github.com/sameeprana"
+                  to="https://github.com/uddhab7"
                   target="_blank"
                   className="relative flex justify-start items-center text-white  font-[700]">
                   <span
