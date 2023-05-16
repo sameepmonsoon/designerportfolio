@@ -24,8 +24,8 @@ const SkillsPage = () => {
 
   return (
     <div className="relative flex flex-col justify-center items-center gap-5">
-      <div className=" absolute min-w-full space-x-10 top-[-10%] sm:top-[-10%] md:top-[-15%] lg:top-[-40%] z-[-10] text-[18px] sm:text-[2rem] md:text-[3rem] lg:text-[5rem] h-auto sm:h-[10rem] p-1 md:h-[22rem] text-[#1b1b1b] font-[400] text-center flex justify-start  md:text-start capitalize overflow-hidden">
-        making the complicated simple and finding beauty in truth.
+      <div className=" absolute min-w-full space-x-10 top-[-10%] sm:top-[-10%] md:top-[-15%] lg:top-[-35%] z-[-10] text-[2rem] sm:text-[2.5rem] md:text-[3.8rem] lg:text-[5rem] h-auto sm:h-[10rem] p-1 md:h-[22rem] text-[#1b1b1b] font-[400] text-center flex justify-center  md:text-start capitalize overflow-hidden">
+        making the complicated simple and finding beauty in truth.{" "}
       </div>
       <p
         style={{

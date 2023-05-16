@@ -10,10 +10,10 @@ const Logo = (props: { otherSection?: boolean }) => {
       className={`h-[55px] w-[60px] bg-contain flex flex-row justify-start items-center text-deep-blue ${
         otherSection && "dark:text-white"
       } `}>
-      <span className="text-[28px] font-[800] flex justify-start items-center">
+      <span className="text-[34px] font-[800] flex justify-start items-center">
         <span>Cr</span>
         <span className="text-yellow">
-          <TbHexagonLetterU size={25} />
+          <TbHexagonLetterU size={34} />
         </span>
       </span>
     </Link>

@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        opensans: ["Open Sans", "sans-serif"],
+        // playfair: ["Playfair Display", "serif"],
+        sans: ["Poppins", "ui-sans-serif", "system-ui"],
       },
       colors: {
         "deep-blue": "#141414",
@@ -20,6 +20,8 @@ module.exports = {
       screens: {
         sm: "576px",
         md: "960px",
+        midmd: "1150px",
+        bigmd: "1250px",
         lg: "1440px",
       },
       fontFamily: {

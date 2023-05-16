@@ -446,6 +446,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.17.tgz#c5a1a4bfe1b57f0c3e61b29883525c6da3e5c091"
   integrity sha512-y+EHuSchhL7FjHgvQL/0fnnFmO4T1bhvWANX6gcnqTjtnKWbTvUMCpGnv2+t+31d7RzyEAYAd4u2fnIhHL6N/Q==
 
+"@fontsource/poppins@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.10.tgz#44dbfeacb5d89efca5ad7ad6cc941b2ac1ee424b"
+  integrity sha512-oYZVHsnlwV3VWM1SE/m6SUxVh0QLk5+2wB+lBiXcI7N/0KVQWmV9YykaPqfJHBLvmdya+MAOnv+BQHeLU1vOOw==
+
 "@formspree/react@^2.4.1":
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@formspree/react/-/react-2.4.1.tgz#c6ee262f63443006fc43902fd08ec1a43bfb51c3"
@@ -2721,6 +2726,11 @@ react-transition-group@^4.4.5:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-type-animation@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-type-animation/-/react-type-animation-3.0.1.tgz#ba8d8d53dc51313c3ce9152865684f6297adcf71"
+  integrity sha512-n6erVzng071lN8A0UbNT9Q7m5D6puaa9OE1lakwu5UKxMkEnUbjs2MLT3jN/SUjuxNtKmDP2GqJKb3uQ5wZNkQ==
 
 react-typed@^1.2.0:
   version "1.2.0"
