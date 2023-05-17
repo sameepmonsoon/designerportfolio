@@ -39,21 +39,6 @@ const Hero = (props: {
       id="hero"
       className="myDiv font-sans snap-start min-h-screen gap-[10rem] flex flex-col items-center md:items-start relative md:top-0 justify-center dark:bg-deep-blue">
       <div className="relative w-screen h-screen text-black flex flex-col gap-2 justify-start items-start px-1">
-        {/* <p className="flex items-center justify-center absolute top-[3.9%] p-2 text-[1.5rem] w-[63%] h-[10rem] left-2 bg-gray-200 border-[1px] border-gray-100 rounded">
-          <span className="text-[4.6rem] capitalize text-black/70 font-[700]">
-            learn the rules like a pro 
-            <TypeAnimation
-              sequence={[
-                "            learn the rules like a pro ,",
-                1000,
-                "so you can break them like an artist",
-              ]}
-              speed={50}
-              style={{ fontSize: "2em" }}
-              repeat={Infinity}
-            />
-          </span>
-        </p> */}
         <div className="para w-full min-h-screen sm:h-[50%] flex flex-col sm:flex-row justify-start items-center overflow-hidden ">
           <div className="flex flex-col justify-start items-start order-2 sm:order-1">
             <p className="w-auto p-[1rem] order-0 text-[20px] flex justify-center items-center h-10 sm:text-[22px] font-[600] text-gray-500">
