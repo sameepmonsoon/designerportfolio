@@ -92,10 +92,7 @@ const Card = (props: CardTypes) => {
       </section>
       <p className="font-semibold text-black/70 text-[16px] m-0 p-1 text-start w-full overflow-hidden flex justify-start items-center gap-2">
         {cardTitle}
-        <CgFigma
-          size={18}
-          className="text-pink-600 cursor-pointer "
-        />
+        <CgFigma size={18} className="text-pink-600 cursor-pointer " />
       </p>
     </div>
   );

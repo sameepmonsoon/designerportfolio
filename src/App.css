@@ -19,6 +19,9 @@ html,
 body,
 #root,
 .app {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 1px; /* Adjust as needed */
+  scroll-behavior: smooth;
   height: 100%;
   margin: 0;
   height: 100%;

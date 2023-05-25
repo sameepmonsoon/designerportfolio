@@ -35,7 +35,7 @@ const Footer = (props: FooterProps) => {
                     className={`absolute bg-transparent w-0 group-hover:w-[100%] h-full transition:all duration-200 group-hover:border-b-[2px] border-b-white border-b-[2px] z-10`}>
                     &nbsp;
                   </span>
-                  +977 9818116748
+                  +977 9860817413
                 </Link>
                 <Link
                   to="https://github.com/uddhab7"

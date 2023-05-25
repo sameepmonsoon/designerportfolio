@@ -13,9 +13,11 @@ const SkillsPage = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.pageYOffset;
-    if (scrollPosition > 1400 && scrollPosition < 2200) {
-      setBackgroundColor("black");
-      setTextColor("black");
+    if (scrollPosition > 990 && scrollPosition < 2300) {
+      setTimeout(() => {
+        setBackgroundColor("black");
+        setTextColor("black");
+      }, 1100);
     } else {
       setBackgroundColor("transparent");
       setTextColor("black");
@@ -34,14 +36,14 @@ const SkillsPage = () => {
           color: `${backgroundColor === "black" ? "grey" : "black"}`,
         }}
         className=" w-full relative flex flex-col justify-center items-center px-2 lg:top-5 top-14 h-40 sm:h-20 text-deep-blue dark:text-white ">
-        <span className="capitalize text-xl font-[600] text-start w-full border-t-[1px] border-t-black py-5">
+        <span className="capitalize relative top-2 text-xl font-[600] text-start w-full border-t-[1px] border-t-black py-5">
           What i <span>do?</span>
         </span>
         <span
           style={{
             color: `${backgroundColor === "black" ? "white" : "black"}`,
           }}
-          className="w-full px-10 text-[18px] font-[500]">
+          className="relative top-[-12px] lg:top-0 w-full px-10  text-[18px] font-[500]">
           I am interested in the field of Software Development Life Cycle
           SDLC.These are some of my abilities and experiences.
         </span>
@@ -59,8 +61,8 @@ const SkillsPage = () => {
           transition={{ duration: 0.4 }}
           variants={{
             hidden: {
-              opacity: 0.9,
-              y: 20,
+              opacity: 0.5,
+              y: 40,
             },
             visible: {
               opacity: 1,
@@ -77,7 +79,7 @@ const SkillsPage = () => {
               variants={{
                 hidden: {
                   opacity: 0.9,
-                  y: 20,
+                  y: 40,
                 },
                 visible: {
                   opacity: 1,
@@ -132,7 +134,7 @@ const SkillsPage = () => {
               variants={{
                 hidden: {
                   opacity: 0.9,
-                  y: 20,
+                  y: 40,
                 },
                 visible: {
                   opacity: 1,
@@ -188,7 +190,7 @@ const SkillsPage = () => {
               variants={{
                 hidden: {
                   opacity: 0.9,
-                  y: 20,
+                  y: 40,
                 },
                 visible: {
                   opacity: 1,

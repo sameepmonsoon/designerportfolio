@@ -11,6 +11,7 @@ import amazon from "/src/assets/figma3.jpg";
 import twitter from "/src/assets/figma4.jpg";
 import futsal from "/src/assets/figma5.png";
 import blood from "/src/assets/figma2.jpg";
+import bankImage from "/src/assets/bank.png";
 const Projects = () => {
   return (
     <ProjectsComponent
@@ -20,15 +21,24 @@ const Projects = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
+            transition={{
+              delay: 1,
+              duration: 0.5,
+              ease: "easeOut",
+            }}
             variants={{
               hidden: {
                 opacity: 0,
-                x: -50,
+                y: -180,
               },
               visible: {
                 opacity: 1,
-                x: 0,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 30, // Adjust the damping value as needed
+                  stiffness: 200, // Adjust the stiffness value as needed
+                },
               },
             }}>
             <Card
@@ -57,15 +67,20 @@ const Projects = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ delay: 1, duration: 0.9 }}
             variants={{
               hidden: {
                 opacity: 0,
-                x: -50,
+                y: -160,
               },
               visible: {
                 opacity: 1,
-                x: 0,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 100,
+                },
               },
             }}>
             <Card
@@ -100,16 +115,21 @@ const Projects = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 1, duration: 0.5 }}
             variants={{
               hidden: {
                 opacity: 0,
-                x: -50,
+                y: -140,
               },
               visible: {
                 opacity: 1,
-                x: 0,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 30,
+                  stiffness: 100,
+                },
               },
             }}>
             <Card
@@ -140,16 +160,21 @@ const Projects = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.4 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             variants={{
               hidden: {
                 opacity: 0,
-                x: -50,
+                y: -120,
               },
               visible: {
                 opacity: 1,
-                x: 0,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 100,
+                },
               },
             }}>
             <Card
@@ -181,16 +206,21 @@ const Projects = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.4 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             variants={{
               hidden: {
                 opacity: 0,
-                x: -50,
+                y: -100,
               },
               visible: {
                 opacity: 1,
-                x: 0,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 100,
+                },
               },
             }}>
             <Card
@@ -221,16 +251,21 @@ const Projects = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 1.6, duration: 0.5 }}
             variants={{
               hidden: {
                 opacity: 0,
-                x: -50,
+                y: -80,
               },
               visible: {
                 opacity: 1,
-                x: 0,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 100,
+                },
               },
             }}>
             <Card
@@ -261,27 +296,68 @@ const Projects = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.9, duration: 0.9 }}
             variants={{
               hidden: {
                 opacity: 0,
-                x: -50,
+                y: -50,
               },
               visible: {
                 opacity: 1,
-                x: 0,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 100,
+                },
               },
             }}>
             <Card
               cardTitle="Travelog"
               cardDescription={
                 <p>
-                  Travelog is a travel agency's website. It enables users to browse,
-                  select, and book their travel destination.
+                  Travelog is a travel agency's website. It enables users to
+                  browse, select, and book their travel destination.
                 </p>
               }
               cardImage={travelImage}
+              cardLinks={
+                <>
+                  <Link to="https://www.figma.com/" target="_blank">
+                    <FaFigma className="transition duration-200 " size={25} />
+                  </Link>
+                  <Link to="https://www.figma.com/ " target="_blank">
+                    <BiLinkAlt className="transition duration-200 " size={25} />
+                  </Link>
+                </>
+              }
+            />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.9, duration: 0.9 }}
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: -50,
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 100,
+                },
+              },
+            }}>
+            <Card
+              cardTitle="Mobile Banking App"
+              cardDescription={<p>Login screen for a mobile banking app.</p>}
+              cardImage={bankImage}
               cardLinks={
                 <>
                   <Link to="https://www.figma.com/" target="_blank">
