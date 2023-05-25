@@ -19,9 +19,11 @@ module.exports = {
       },
       screens: {
         sm: "576px",
+        customSm:'700px',
         md: "960px",
-        midmd: "1150px",
+        midmd: "950px",
         bigmd: "1250px",
+        customMd:'1000px',
         lg: "1440px",
       },
       fontFamily: {

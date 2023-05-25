@@ -19,7 +19,7 @@ const HomeLayout = (props: HomeTypes) => {
   }, []);
   const NavLinkNames = [
     { label: "Home", link: "home" },
-    // { label: "skills", link: "skill" },
+    // { label: "skills", link: " skill" },
 
     { label: "projects", link: "projects" },
     { label: "About", link: "about" },

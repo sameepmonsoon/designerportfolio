@@ -5,6 +5,7 @@ import Card from "../Components/Card/Card";
 import ProjectsComponent from "../Page Component/Projects/ProjectsComponent";
 import { motion } from "framer-motion";
 import projectCardImage from "/src/assets/figma1.jpg";
+import travelImage from "/src/assets/Travel_Landing page.jpg";
 import restaurant from "/src/assets/figma6.jpg";
 import amazon from "/src/assets/figma3.jpg";
 import twitter from "/src/assets/figma4.jpg";
@@ -251,6 +252,42 @@ const Projects = () => {
                   <Link
                     to="https://www.figma.com/file/I9OXW9v3Kfob6lApb9Ruio/ecom?type=design&node-id=0-1&t=w8AieTDYobMHE3mq-0 "
                     target="_blank">
+                    <BiLinkAlt className="transition duration-200 " size={25} />
+                  </Link>
+                </>
+              }
+            />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: -50,
+              },
+              visible: {
+                opacity: 1,
+                x: 0,
+              },
+            }}>
+            <Card
+              cardTitle="Travelog"
+              cardDescription={
+                <p>
+                  Travelog is a travel agency's website. It enables users to browse,
+                  select, and book their travel destination.
+                </p>
+              }
+              cardImage={travelImage}
+              cardLinks={
+                <>
+                  <Link to="https://www.figma.com/" target="_blank">
+                    <FaFigma className="transition duration-200 " size={25} />
+                  </Link>
+                  <Link to="https://www.figma.com/ " target="_blank">
                     <BiLinkAlt className="transition duration-200 " size={25} />
                   </Link>
                 </>
