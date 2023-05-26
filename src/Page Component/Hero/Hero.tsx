@@ -56,7 +56,7 @@ const Hero = (props: {
             <p className="w-auto p-[1rem] order-0 text-[20px] flex justify-center items-center h-10 sm:text-[22px] font-[600] text-gray-500">
               <span> {userIntroduction}</span>
             </p>
-            <div className="group relative top-[3rem] md:top-[-2rem] text-[6rem] sm:text-[6rem] sm:text-center md:text-[12rem] lg:text-[14rem]  min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b] font-[fantasy,sans] font-[900] z-[-10] text-center flex justify-center  md:text-start whitespace-rap  overflow-hidden">
+            <div className="group relative top-[3rem] md:top-[-2rem] text-[5rem] sm:text-[6rem] sm:text-center md:text-[12rem] lg:text-[14rem]  min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b] font-[fantasy,sans] font-[900] z-[-10] text-center flex justify-center  md:text-start whitespace-rap  overflow-hidden">
               <span className="relative left-0 flex justify-end  min-w-40  h-full">
                 D
               </span>
@@ -111,10 +111,10 @@ const Hero = (props: {
         </div>
         <div className="para w-full z-[-1] relative top-0 md:top-[-8rem] lg:top-[-18rem] min-h-screen sm:h-[50%] flex flex-col sm:flex-row justify-start items-center overflow-hidden">
           <div className="flex flex-col justify-start items-start order-1 sm:order-2">
-            <div className="text-[6rem]  sm:text-[6rem] sm:text-center md:text-[10rem] lg:text-[13.5rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b]/60 font-[fantasy,sans] font-[700] z-[-10] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
+            <div className="text-[5rem]  sm:text-[6rem] sm:text-center md:text-[10rem] lg:text-[13.5rem] sm:min-w-[75%] h-auto sm:h-[10rem] p-1 md:h-[19rem] text-[#1b1b1b]/60 font-[fantasy,sans] font-[700] z-[-10] text-center flex justify-center  md:text-start whitespace-rap capitalize overflow-hidden">
               {homeBgName}
             </div>
-            <p className="w-auto p-1 order-3 text-[18px] sm:text-[18px] font-[600]">
+            <p className="w-auto p-2 order-3 text-[17px] sm:text-[18px] font-[600]">
               Everything is designed. Few things are designed well.
             </p>
           </div>

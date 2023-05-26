@@ -14,12 +14,11 @@ import image4 from "../assets/bank.png";
 import image5 from "../assets/figma3.png";
 import image6 from "../assets/figma4.jpg";
 import image7 from "../assets/figma6.jpg";
-import image8 from "../assets/figma5.png";
 const Home = () => {
   return (
     <HomeLayout
       Children={
-        <div className="snap-mandatory snap-y overflow-hidden" id="home">
+        <div className="overflow-x-hidden" id="home">
           <Hero
             userImage={image}
             resumeButton={
@@ -39,9 +38,10 @@ const Home = () => {
             "
             }
           />
+
           <About />
           <Skills />
-          <div className="min-h-[35rem] flex flex-col justify-evenly gap-1">
+          <div className="h-[27rem] flex flex-col justify-evenly gap-1">
             <Marquee
               direction="right"
               speed={100}

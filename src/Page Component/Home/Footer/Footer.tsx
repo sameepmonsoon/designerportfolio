@@ -1,12 +1,6 @@
 import React from "react";
 import SocialMediaIcons from "../../../Components/SocialMediaIcons/SocialMediaIcons";
-import {
-  AiFillGithub,
-  GrLinkedinOption,
-  AiOutlineInstagram,
-  BsFacebook,
-  ImTwitter,
-} from "react-icons/all";
+
 import { Link } from "react-router-dom";
 import image from "../../../assets/uddhab-3.jpg";
 import Logo from "../../../Components/LogoContainer/Logo";
@@ -28,7 +22,7 @@ const Footer = (props: FooterProps) => {
             socialMediaLinks={
               <>
                 <Link
-                  to="https://github.com/uddhab7"
+                  to="tel: +977 9860817413"
                   target="_blank"
                   className="relative flex justify-start items-center text-white font-[700]">
                   <span
@@ -38,7 +32,7 @@ const Footer = (props: FooterProps) => {
                   +977 9860817413
                 </Link>
                 <Link
-                  to="https://github.com/uddhab7"
+                  to="mailto: uddhab8848@gmail.com"
                   target="_blank"
                   className="relative flex justify-start items-center text-white  font-[700]">
                   <span

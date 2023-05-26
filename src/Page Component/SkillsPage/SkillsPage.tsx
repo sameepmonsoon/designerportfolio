@@ -1,39 +1,71 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { debounce } from "lodash";
 const SkillsPage = () => {
   const [backgroundColor, setBackgroundColor] = useState("transparent");
-
   const [textColor, setTextColor] = useState("");
+
   useEffect(() => {
+    const handleScroll = debounce(() => {
+      const scrollPosition = window.pageYOffset;
+      if (scrollPosition > 990 && scrollPosition < 2300) {
+        setTimeout(() => {
+          setBackgroundColor("black");
+          setTextColor("white");
+        }, 1100);
+      } else {
+        setBackgroundColor("transparent");
+        setTextColor("black");
+      }
+    }, 200);
+
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const handleScroll = () => {
-    const scrollPosition = window.pageYOffset;
-    if (scrollPosition > 990 && scrollPosition < 2300) {
-      setTimeout(() => {
-        setBackgroundColor("black");
-        setTextColor("black");
-      }, 1100);
-    } else {
-      setBackgroundColor("transparent");
-      setTextColor("black");
-    }
+  const waveAnimation = {
+    hidden: { y: "0%", skew: "0deg", opacity: 0 },
+    visible: {
+      y: "0%",
+      skew: "0deg",
+      opacity: 1,
+      transition: { duration: 0.4, ease: "easeInOut" },
+    },
+    exit: { opacity: 0 },
   };
 
   return (
-    <div className="relative flex flex-col justify-center items-center gap-5">
+    <div className="relative flex flex-col justify-center items-center gap-5 ">
       <div className=" absolute min-w-full space-x-10 top-[-10%] sm:top-[-10%] md:top-[-15%] lg:top-[-35%] z-[-10] text-[2rem] sm:text-[2.5rem] md:text-[3.8rem] lg:text-[5rem] h-auto sm:h-[10rem] p-1 md:h-[22rem] text-[#1b1b1b] font-[400] text-center flex justify-center  md:text-start capitalize overflow-hidden">
-        making the complicated simple and finding beauty in truth.{" "}
+        making the complicated simple and finding beauty in truth.
       </div>
+      <AnimatePresence>
+        {backgroundColor === "black" && (
+          <motion.div
+            className="mt-14 sm:mt-7 md:mt-[2.6rem] lg:mt-5"
+            key="background"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={waveAnimation}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: "black",
+              zIndex: -1,
+            }}
+          />
+        )}
+      </AnimatePresence>
       <p
         style={{
-          backgroundColor: backgroundColor,
-
-          color: `${backgroundColor === "black" ? "grey" : "black"}`,
+          // backgroundColor: backgroundColor,
+          color: textColor,
         }}
         className=" w-full relative flex flex-col justify-center items-center px-2 lg:top-5 top-14 h-40 sm:h-20 text-deep-blue dark:text-white ">
         <span className="capitalize relative top-2 text-xl font-[600] text-start w-full border-t-[1px] border-t-black py-5">
@@ -41,7 +73,7 @@ const SkillsPage = () => {
         </span>
         <span
           style={{
-            color: `${backgroundColor === "black" ? "white" : "black"}`,
+            color: textColor,
           }}
           className="relative top-[-12px] lg:top-0 w-full px-10  text-[18px] font-[500]">
           I am interested in the field of Software Development Life Cycle
@@ -49,9 +81,11 @@ const SkillsPage = () => {
         </span>
       </p>
       <div
-        style={{
-          backgroundColor: backgroundColor,
-        }}
+        style={
+          {
+            // backgroundColor: backgroundColor,
+          }
+        }
         className="flex flex-col justify-start items-center px-0 md:px-10 sm:flex-col sm:pl-[0rem] md:py-10  w-full min-h-screen py-10 overflow-hidden">
         <motion.div
           className="text-[40px] capitalize flex flex-col gap-5 w-full justify-center items-center"
@@ -92,7 +126,7 @@ const SkillsPage = () => {
                 }}
                 className={`text-black  border-[1px] min-h-[15rem] min-w-full flex flex-col justify-start items-start  ${
                   backgroundColor === "black"
-                    ? " border-gray-100/10"
+                    ? " border-white/20"
                     : "border-gray-00 "
                 } p-3 rounded-md`}>
                 <div
@@ -101,7 +135,7 @@ const SkillsPage = () => {
                   }}
                   className={`text-black border-[2px] h-[4rem] w-[4rem] flex justify-center items-center ${
                     backgroundColor === "black"
-                      ? " border-gray-100/10"
+                      ? " border-white/20"
                       : "border-gray-00 "
                   } p-2 rounded-lg`}>
                   Ui
@@ -112,7 +146,7 @@ const SkillsPage = () => {
                   }}
                   className={`text-black border-[0px] h-[4rem] w-full flex justify-start items-center ${
                     backgroundColor === "black"
-                      ? " border-gray-100/10"
+                    ? " border-white/20"
                       : "border-gray-00 "
                   } p-0 rounded-lg`}>
                   Ui & ux design
@@ -147,7 +181,7 @@ const SkillsPage = () => {
                 }}
                 className={`text-black border-[1px]  flex min-h-[15rem] min-w-full flex-col justify-start items-start  ${
                   backgroundColor === "black"
-                    ? " border-gray-100/10"
+                  ? " border-white/20"
                     : "border-gray-00 "
                 } p-3 rounded-md`}>
                 <div
@@ -156,7 +190,7 @@ const SkillsPage = () => {
                   }}
                   className={`text-black border-[2px] h-[4rem] min-w-[4rem] max-w-[14rem] flex justify-center items-center ${
                     backgroundColor === "black"
-                      ? " border-gray-100/10"
+                    ? " border-white/20"
                       : "border-gray-00 "
                   } p-2 rounded-lg`}>
                   QA
@@ -167,7 +201,7 @@ const SkillsPage = () => {
                   }}
                   className={`text-black border-[0px] h-[4rem] min-w-full text-[38px] flex justify-start items-center ${
                     backgroundColor === "black"
-                      ? " border-gray-100/10"
+                    ? " border-white/20"
                       : "border-gray-00 "
                   } p-0 rounded-lg`}>
                   Quality Assurance
@@ -203,7 +237,7 @@ const SkillsPage = () => {
                 }}
                 className={`text-black border-[1px] min-h-[15rem] min-w-full flex flex-col justify-start items-start  ${
                   backgroundColor === "black"
-                    ? " border-gray-100/10"
+                  ? " border-white/20"
                     : "border-gray-00 "
                 } p-3 rounded-md`}>
                 <div
@@ -212,7 +246,7 @@ const SkillsPage = () => {
                   }}
                   className={`text-black border-[2px] h-[4rem] minw-[4rem] max-w-[15rem] flex justify-center items-center ${
                     backgroundColor === "black"
-                      ? " border-gray-100/10"
+                    ? " border-white/20"
                       : "border-gray-00 "
                   } p-2 rounded-lg`}>
                   Frontend
@@ -223,7 +257,7 @@ const SkillsPage = () => {
                   }}
                   className={`text-black border-[0px] h-[4rem] w-full flex justify-start items-center ${
                     backgroundColor === "black"
-                      ? " border-gray-100/10"
+                     ? " border-white/20"
                       : "border-gray-00 "
                   } p-0 rounded-lg`}>
                   Html & Css
