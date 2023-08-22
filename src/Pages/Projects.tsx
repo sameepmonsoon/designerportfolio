@@ -5,6 +5,8 @@ import Card from "../Components/Card/Card";
 import ProjectsComponent from "../Page Component/Projects/ProjectsComponent";
 import { motion } from "framer-motion";
 import projectCardImage from "/src/assets/figma1.jpg";
+import virtualGravity from "/src/assets/virtual_gravity.jpg";
+import mobileBanking from "/src/assets/mobile_banking.jpg";
 import travelImage from "/src/assets/Travel_Landing page.jpg";
 import restaurant from "/src/assets/figma6.jpg";
 import amazon from "/src/assets/figma3.jpg";
@@ -12,9 +14,11 @@ import twitter from "/src/assets/figma4.jpg";
 import futsal from "/src/assets/figma5.png";
 import blood from "/src/assets/figma2.jpg";
 import bankImage from "/src/assets/bank.png";
+import grocery from "/src/assets/Grocery-prototype.png";
 const Projects = () => {
   return (
     <ProjectsComponent
+      projectComponentTitle={"Recent Projects"}
       projectContent={
         <>
           <motion.div
@@ -29,15 +33,115 @@ const Projects = () => {
             variants={{
               hidden: {
                 opacity: 0,
-                y: -180,
+                y: -80,
               },
               visible: {
                 opacity: 1,
                 y: 0,
                 transition: {
                   type: "spring",
-                  damping: 30, // Adjust the damping value as needed
-                  stiffness: 200, // Adjust the stiffness value as needed
+                  damping: 30,
+                  stiffness: 200,
+                },
+              },
+            }}>
+            <Card
+              cardTitle={"Virtual Gravity"}
+              cardDescription={
+                <p>
+                  Virtual Gravity is desgin and development company that
+                  specializes in building small and enterprise level software
+                  for small to medium size businesses.
+                </p>
+              }
+              cardImage={virtualGravity}
+              cardLinks={
+                <>
+                  <Link
+                    to="https://www.figma.com/file/rtPiEemYvtbkyEFvC36PaY/Virtual-gravity?type=design&node-id=0-1&mode=design&t=8P9KwRJ4k5OxB315-0"
+                    target="_blank">
+                    <FaFigma size={25} />
+                  </Link>
+                  <Link
+                    to="https://www.figma.com/file/rtPiEemYvtbkyEFvC36PaY/Virtual-gravity?type=design&node-id=0-1&mode=design&t=8P9KwRJ4k5OxB315-0"
+                    target="_blank">
+                    <BiLinkAlt className="transition duration-200 " size={25} />
+                  </Link>
+                </>
+              }
+            />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{
+              delay: 1,
+              duration: 0.5,
+              ease: "easeOut",
+            }}
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: -80,
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 30,
+                  stiffness: 200,
+                },
+              },
+            }}>
+            <Card
+              cardTitle={"Mobile Banking App"}
+              cardDescription={
+                <p>
+                  Template for a mobile banking app,which allow you to access
+                  your banking accounts and conduct financial transactions using
+                  a mobile device, anytime and from anywhere
+                </p>
+              }
+              cardImage={mobileBanking}
+              cardLinks={
+                <>
+                  <Link
+                    to="https://www.figma.com/file/rfugb2cN4nFzrf6ewSM8bC/Mobile-Banking-APP?type=design&node-id=2-3&mode=design&t=YUbfL86OT9H8HWDf-0"
+                    target="_blank">
+                    <FaFigma size={25} />
+                  </Link>
+                  <Link
+                    to="https://www.figma.com/file/rfugb2cN4nFzrf6ewSM8bC/Mobile-Banking-APP?type=design&node-id=2-3&mode=design&t=YUbfL86OT9H8HWDf-0"
+                    target="_blank">
+                    <BiLinkAlt className="transition duration-200 " size={25} />
+                  </Link>
+                </>
+              }
+            />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{
+              delay: 1,
+              duration: 0.5,
+              ease: "easeOut",
+            }}
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: -80,
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 30,
+                  stiffness: 200,
                 },
               },
             }}>
@@ -358,6 +462,44 @@ const Projects = () => {
               cardTitle="Mobile Banking App"
               cardDescription={<p>Login screen for a mobile banking app.</p>}
               cardImage={bankImage}
+              cardLinks={
+                <>
+                  <Link to="https://www.figma.com/" target="_blank">
+                    <FaFigma className="transition duration-200 " size={25} />
+                  </Link>
+                  <Link to="https://www.figma.com/ " target="_blank">
+                    <BiLinkAlt className="transition duration-200 " size={25} />
+                  </Link>
+                </>
+              }
+            />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.9, duration: 0.9 }}
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: -50,
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 100,
+                },
+              },
+            }}>
+            <Card
+              cardTitle="Sabji Land"
+              cardDescription={
+                <p>Sabji Land, a concept for a grocery store app. </p>
+              }
+              cardImage={grocery}
               cardLinks={
                 <>
                   <Link to="https://www.figma.com/" target="_blank">

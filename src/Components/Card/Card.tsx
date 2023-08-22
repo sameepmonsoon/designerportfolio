@@ -23,7 +23,7 @@ const Card = (props: CardTypes) => {
         className={
           otherSection
             ? `bg-white dark:bg-deep-blue h-[30rem] w-[22rem] md:h-[35rem] md:w-[35rem] border-[1px] rounded-[10px] overflow-hidden border-gray-100 dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col  relative cursor-pointer justify-start items-center`
-            : `bg-white dark:bg-deep-blue  h-[16rem] w-[22rem] sm:h-[20rem] sm:w-[32rem] customSm:h-[25rem] customSm:w-[40rem] customMd:h-[30rem] customMd:w-[50rem] bigmd:h-[22rem] bigmd:w-[35rem] lg:h-[20rem] lg:w-[29.5rem] border-[1px] rounded-[10px] overflow-hidden border-gray-200  dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col md:flex-row relative cursor-pointer justify-start items-center `
+            : `bg-white dark:bg-deep-blue  h-[16rem] w-[22rem] sm:h-[20rem] sm:w-[32rem] customSm:h-[25rem] customSm:w-[40rem] customMd:h-[30rem] customMd:w-[50rem] bigmd:h-[22rem] bigmd:w-[35rem] lg:h-[24rem] lg:w-[34.5rem] border-[1px] rounded-[10px] overflow-hidden border-gray-200  dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col md:flex-row relative cursor-pointer justify-start items-center `
         }
         onMouseOver={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>

@@ -14,6 +14,8 @@ import image4 from "../assets/bank.png";
 import image5 from "../assets/figma3.png";
 import image6 from "../assets/figma4.jpg";
 import image7 from "../assets/figma6.jpg";
+import image8 from "../assets/Grocery-prototype.png";
+import image9 from "../assets/grocery.png";
 const Home = () => {
   return (
     <HomeLayout
@@ -85,6 +87,14 @@ const Home = () => {
                 />
                 <img
                   src={image7}
+                  className="h-[15rem] object-cover rounded-md"
+                />
+                <img
+                  src={image8}
+                  className="h-[15rem] object-cover rounded-md"
+                />
+                <img
+                  src={image9}
                   className="h-[15rem] object-cover rounded-md"
                 />
               </div>
