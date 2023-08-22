@@ -1,4 +1,4 @@
-import { FaFigma } from "react-icons/all";
+import { AiFillStar, FaFigma } from "react-icons/all";
 import { BiLinkAlt, RxGlobe } from "react-icons/all";
 import { Link } from "react-router-dom";
 import Card from "../Components/Card/Card";
@@ -46,6 +46,12 @@ const Projects = () => {
               },
             }}>
             <Card
+              customCardLink={
+                <AiFillStar
+                  size={22}
+                  className="text-pink-600 cursor-pointer "
+                />
+              }
               cardTitle={"Virtual Gravity"}
               cardDescription={
                 <p>
@@ -96,6 +102,12 @@ const Projects = () => {
               },
             }}>
             <Card
+              customCardLink={
+                <AiFillStar
+                  size={22}
+                  className="text-pink-600 cursor-pointer "
+                />
+              }
               cardTitle={"Mobile Banking App"}
               cardDescription={
                 <p>

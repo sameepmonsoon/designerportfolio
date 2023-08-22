@@ -12,10 +12,17 @@ type CardTypes = {
   cardDescription: string | any;
   cardImage: string;
   cardLinks?: any;
+  customCardLink?: React.ReactNode;
 };
 const Card = (props: CardTypes) => {
-  const { cardTitle, cardDescription, cardImage, cardLinks, otherSection } =
-    props;
+  const {
+    cardTitle,
+    cardDescription,
+    cardImage,
+    cardLinks,
+    otherSection,
+    customCardLink,
+  } = props;
   const [mouseOver, setMouseOver] = useState(false);
   return (
     <div className="flex flex-col gap-2 items-start justify-start">
@@ -92,7 +99,11 @@ const Card = (props: CardTypes) => {
       </section>
       <p className="font-semibold text-black/70 text-[16px] m-0 p-1 text-start w-full overflow-hidden flex justify-start items-center gap-2">
         {cardTitle}
-        <CgFigma size={18} className="text-pink-600 cursor-pointer " />
+        {customCardLink ? (
+          customCardLink
+        ) : (
+          <CgFigma size={18} className="text-pink-600 cursor-pointer " />
+        )}
       </p>
     </div>
   );
